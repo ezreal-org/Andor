@@ -192,5 +192,6 @@ private:
 	static int task;
 	static int received_msg;
 	static bool drawed_flag;
+
 };
 #endif ANDOR_DEMO_H
