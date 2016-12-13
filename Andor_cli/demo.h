@@ -40,6 +40,10 @@ public:
 				cout << "Error condition, could not close camera" << endl << endl;
 			}
 		}
+		delete[]handles;
+		for (int i = 0; i < *p_device_cnt; i++)
+			delete[]buffers[i];
+		delete[]buffers;
 		delete p_device_cnt;
 		AT_FinaliseLibrary();
 	}
@@ -151,7 +155,7 @@ public:
 	{
 		while (true)
 		{
-			if (task < *p_device_cnt) { Thread::Sleep(1); }
+			if (task < *p_device_cnt) {  Thread::Sleep(1); }
 			else
 			{
 				for (int i = 0; i < *p_device_cnt; i++) {

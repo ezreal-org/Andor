@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="asyn_invoke.h" />
     <ClInclude Include="atcore.h" />
     <ClInclude Include="ATMCD32D.H" />
     <ClInclude Include="atutility.h" />
